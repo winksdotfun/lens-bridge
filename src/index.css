@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Barlow font */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://ext.same-assets.com/1049785020/1734157722.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://ext.same-assets.com/1049785020/1613265187.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://ext.same-assets.com/1049785020/3832655757.woff2') format('woff2');
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background-color: #f8fafc;
+  color: #22223b;
+}
+
+/* Across Bridge Theme */
+:root {
+  --background: 220 60% 98%; /* #f8fafc */
+  --foreground: 240 15% 15%; /* #22223b */
+  --card: 0 0% 100%; /* #fff */
+  --card-foreground: 240 15% 15%;
+  --popover: 220 60% 98%;
+  --popover-foreground: 240 15% 15%;
+  --primary: 226 70% 60%; /* #4f8cff */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 262 70% 70%; /* #b8aaff */
+  --secondary-foreground: 240 15% 15%;
+  --muted: 220 10% 80%; /* #e2e8f0 */
+  --muted-foreground: 240 15% 40%;
+  --accent: 291 64% 64%; /* #b993f8 */
+  --accent-foreground: 240 15% 15%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 10% 90%;
+  --input: 220 10% 90%;
+  --ring: 226 70% 60%;
+  --radius: 0.75rem;
+}
+
+/* Let's automatically use our dark across-bridge theme */
+html {
+  background-color: #f8fafc;
+}
+
+/* Global Button Styles */
+.across-button {
+  @apply bg-blue-500 text-white rounded-lg px-4 py-2 shadow-sm transition-colors hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50;
+}
+
+.across-button-secondary {
+  @apply bg-violet-500 text-white rounded-lg px-4 py-2 shadow-sm transition-colors hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-300 focus:ring-opacity-50;
+}
+
+/* Custom Input Styles */
+.across-input {
+  @apply bg-white border border-gray-200 rounded-lg px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-transparent;
+}
+
+/* Select Dropdown Styles */
+.across-select {
+  @apply bg-white border border-gray-200 rounded-lg px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-transparent;
+}

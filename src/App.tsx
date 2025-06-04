@@ -506,7 +506,7 @@ function BridgeCard() {
             </div>
 
             <div className="w-full">
-              {isConnected ? (
+              {address ? (
                 <button onClick={handleBridge}
                   disabled={!amount || isNaN(Number(amount)) || Number(amount) <= 0 || !!amountError || limitsLoading}
                   className="w-full bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600 text-white font-semibold py-3 px-4 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-200 disabled:opacity-70 disabled:cursor-not-allowed"
@@ -514,7 +514,11 @@ function BridgeCard() {
                   Bridge
                 </button>
               ) : (
-                "Connect Wallet"
+                <p
+                className="w-full bg-gradient-to-r text-center opacity-70 cursor-not-allowed from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600 text-white font-semibold py-3 px-4 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-200 disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                Connect Wallet
+              </p>
               )}
             </div>
             <p className="text-center text-xs text-gray-500">Powered by <span className=' text-violet-700'>winks.fun</span></p>

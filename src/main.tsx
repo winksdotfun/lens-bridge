@@ -10,7 +10,7 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <Web3Provider>
-    {/* <ReferrerTracker /> */}
+    <ReferrerTracker />
     <App />
   </Web3Provider>
 );
